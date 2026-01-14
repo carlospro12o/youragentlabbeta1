@@ -79,12 +79,19 @@ html { scroll-behavior: smooth; }
 }
 
 .section-title {
-    font-size: 2.5rem;
+    font-size: 2rem; /* Reduced for mobile */
     font-weight: 700;
     margin-bottom: 1rem;
     color: var(--text-main);
     text-align: center;
     letter-spacing: -0.04em;
+}
+
+/* Media query para pantallas grandes */
+@media (min-width: 768px) {
+    .section-title {
+        font-size: 2.5rem;
+    }
 }
 
 .section-subtitle {
@@ -175,3 +182,28 @@ html { scroll-behavior: smooth; }
 /* Utilidades */
 .text-primary { color: var(--primary); }
 .bg-primary { background-color: var(--primary); }
+
+/* =========================================
+   CLASES ESPECÍFICAS (LIMPIEZA HTML)
+   ========================================= */
+
+/* Fondo de Ajedrez para la sección Hero */
+.hero-bg {
+    background-image: url('ajedres.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Fondo de Equipo (Dubai) para la sección About */
+.about-bg {
+    background-image: url('team.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Iframe del mapa */
+.map-frame {
+    border: 0;
+}

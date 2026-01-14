@@ -83,7 +83,10 @@
                 <a href="#contact" onclick="toggleMobileMenu()" class="block font-medium hover:text-primary" data-i18n="nav.contact">Contatti</a>
              </div>
              <div class="mt-6 pt-4 border-t border-gray-200 dark:border-gray-700 flex justify-between items-center">
-                <button onclick="toggleTheme()" class="flex gap-2 font-medium">Tema</button>
+                <button onclick="toggleTheme()" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-gray-600 dark:text-gray-300">
+                    <i data-lucide="moon" class="block dark:hidden"></i>
+                    <i data-lucide="sun" class="hidden dark:block"></i>
+                </button>
                 <div class="flex gap-3">
                     <button onclick="setLanguage('it'); toggleMobileMenu()" class="font-bold">IT</button>
                     <button onclick="setLanguage('es'); toggleMobileMenu()" class="font-bold">ES</button>
@@ -93,13 +96,13 @@
         </div>
     </nav>
 
-    <section id="home" class="relative pt-24 pb-32 flex items-center justify-center min-h-[90vh] bg-cover bg-center bg-no-repeat" style="background-image: url('ajedres.webp');">
+    <section id="home" class="relative pt-24 pb-20 md:pb-32 flex items-center justify-center min-h-[90vh] hero-bg">
         <div class="absolute inset-0 bg-black/70 z-0"></div>
         <div class="max-w-7xl mx-auto px-4 text-center sm:px-6 lg:px-8 relative z-10">
             <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 text-white font-heading" data-aos="fade-down">
                 <span data-i18n="hero.h1">Libera tempo, elimina errori e scala il tuo lavoro con l'IA</span>
             </h1>
-            <p class="mt-6 text-xl text-gray-200 max-w-3xl mx-auto mb-10 leading-relaxed" data-aos="fade-up" data-aos-delay="200" data-i18n="hero.sub">
+            <p class="mt-6 text-lg md:text-xl text-gray-200 max-w-3xl mx-auto mb-10 leading-relaxed" data-aos="fade-up" data-aos-delay="200" data-i18n="hero.sub">
                 Ti consegniamo un piano chiaro...
             </p>
             <div class="flex flex-col sm:flex-row justify-center gap-4" data-aos="fade-up" data-aos-delay="400">
@@ -113,7 +116,7 @@
         </div>
     </section>
 
-    <section id="who-we-help" class="py-16 bg-white dark:bg-gray-950 border-b border-gray-100 dark:border-gray-800">
+    <section id="who-we-help" class="py-16 md:py-20 bg-white dark:bg-gray-950 border-b border-gray-100 dark:border-gray-800">
         <div class="max-w-4xl mx-auto px-4 text-center" data-aos="fade-up">
             <h2 class="text-2xl font-bold text-primary mb-4 font-heading uppercase tracking-wider" data-i18n="who.title">Chi Aiutiamo</h2>
             <h3 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6 font-heading" data-i18n="who.subtitle">
@@ -125,9 +128,9 @@
         </div>
     </section>
 
-    <section id="audit" class="py-24 bg-teal-50 dark:bg-gray-900">
+    <section id="audit" class="py-16 md:py-24 bg-teal-50 dark:bg-gray-900">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
                 <div data-aos="fade-right">
                     <span class="px-3 py-1 rounded-full bg-primary/10 text-primary font-bold text-sm tracking-wide mb-4 inline-block">FASE 1</span>
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6 font-heading" data-i18n="audit.title">AI Operations Audit + Roadmap</h2>
@@ -144,27 +147,32 @@
                     </div>
                 </div>
                 
-                <div class="card-panel p-0 shadow-2xl rotate-2 h-fit" data-aos="fade-left">
-                     <img src="road.webp" alt="Roadmap AI" class="w-full h-auto rounded-2xl block">
+                <div class="card-panel p-0 shadow-2xl rotate-2 h-fit mt-8 lg:mt-0" data-aos="fade-left">
+                     <img src="road.webp" alt="Roadmap AI" class="w-full h-auto object-top rounded-2xl transition-transform duration-500 group-hover:scale-105">
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="sprints" class="py-24 bg-white dark:bg-gray-950">
+    <section id="sprints" class="py-16 md:py-24 bg-white dark:bg-gray-950">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16" data-aos="fade-up">
+            <div class="text-center mb-12 md:mb-16" data-aos="fade-up">
                 <span class="px-3 py-1 rounded-full bg-primary/10 text-primary font-bold text-sm tracking-wide mb-4 inline-block">FASE 2</span>
                 <h2 class="section-title font-heading" data-i18n="sprints.title">Sprint di Implementazione</h2>
                 <p class="section-subtitle" data-i18n="sprints.subtitle">Dopo l'audit, scegli uno o più Sprint per implementare automazioni concrete.</p>
             </div>
             
             <div class="relative max-w-5xl mx-auto">
-                <button onclick="changeService(-1)" class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 p-2 bg-white dark:bg-gray-800 shadow-lg rounded-full text-primary border border-gray-200 dark:border-gray-700 hover:bg-teal-50 dark:hover:bg-gray-700 transition-colors"><i data-lucide="chevron-left"></i></button>
-                <button onclick="changeService(1)" class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 p-2 bg-white dark:bg-gray-800 shadow-lg rounded-full text-primary border border-gray-200 dark:border-gray-700 hover:bg-teal-50 dark:hover:bg-gray-700 transition-colors"><i data-lucide="chevron-right"></i></button>
+                <button onclick="changeService(-1)" class="hidden md:block absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 p-2 bg-white dark:bg-gray-800 shadow-lg rounded-full text-primary border border-gray-200 dark:border-gray-700 hover:bg-teal-50 dark:hover:bg-gray-700 transition-colors"><i data-lucide="chevron-left"></i></button>
+                <button onclick="changeService(1)" class="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 p-2 bg-white dark:bg-gray-800 shadow-lg rounded-full text-primary border border-gray-200 dark:border-gray-700 hover:bg-teal-50 dark:hover:bg-gray-700 transition-colors"><i data-lucide="chevron-right"></i></button>
 
-                <div id="service-card" class="card-panel p-8 md:p-12 flex flex-col md:flex-row items-center gap-12 min-h-[450px]" data-aos="zoom-in">
+                <div id="service-card" class="card-panel p-6 md:p-12 flex flex-col md:flex-row items-center gap-8 md:gap-12 min-h-[450px]" data-aos="zoom-in">
                     </div>
+                
+                <div class="flex md:hidden justify-center gap-6 mt-6">
+                    <button onclick="changeService(-1)" class="p-3 bg-white dark:bg-gray-800 shadow-lg rounded-full text-primary border border-gray-200 dark:border-gray-700"><i data-lucide="chevron-left"></i></button>
+                    <button onclick="changeService(1)" class="p-3 bg-white dark:bg-gray-800 shadow-lg rounded-full text-primary border border-gray-200 dark:border-gray-700"><i data-lucide="chevron-right"></i></button>
+                </div>
                 
                 <div class="mt-10 text-center">
                     <button onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" class="btn btn-primary" data-i18n="sprints.cta">Scegli il tuo Sprint</button>
@@ -173,19 +181,21 @@
         </div>
     </section>
 
-    <section id="deliverables" class="py-24 bg-teal-50 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
+    <section id="deliverables" class="py-16 md:py-24 bg-teal-50 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 class="section-title font-heading mb-6" data-i18n="deliverables.title">Esempi Deliverable</h2>
             <p class="section-subtitle mb-12" data-i18n="deliverables.subtitle">Cosa vedrai nella consegna finale.</p>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" id="deliverables-grid">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8" id="deliverables-grid">
                 </div>
          </div>
     </section>
 
-    <section id="about" class="py-24 bg-white dark:bg-gray-950">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-3xl mx-auto text-center mb-20" data-aos="fade-up">
+    <section id="about" class="relative py-16 md:py-24 about-bg">
+        <div class="absolute inset-0 bg-white/90 dark:bg-gray-950/80 z-0"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-3xl mx-auto text-center mb-16 md:mb-20" data-aos="fade-up">
                 <h2 class="section-title font-heading" data-i18n="about.title">Chi Siamo</h2>
                 <div class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed space-y-4" data-i18n="about.text"></div>
             </div>
@@ -196,20 +206,20 @@
         </div>
     </section>
 
-    <section id="faq" class="py-24 bg-teal-50 dark:bg-gray-900">
+    <section id="faq" class="py-16 md:py-24 bg-teal-50 dark:bg-gray-900">
         <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="section-title mb-12 font-heading" data-i18n="faq.title">FAQ</h2>
             <div class="space-y-4" id="faq-list"></div>
         </div>
     </section>
 
-    <section id="contact" class="py-24 border-t border-gray-200 dark:border-gray-800">
+    <section id="contact" class="py-16 md:py-24 border-t border-gray-200 dark:border-gray-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="mb-16 text-center">
+            <div class="mb-12 md:mb-16 text-center">
                 <h2 class="section-title font-heading" data-i18n="contact.title">Pronto a partire?</h2>
             </div>
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                <div class="space-y-8">
+                <div class="space-y-8 order-2 lg:order-1">
                     <div class="grid grid-cols-1 gap-6">
                         <div class="flex items-start gap-4">
                             <div class="bg-teal-50 dark:bg-teal-900/30 p-3 rounded-lg"><i data-lucide="mail" class="text-primary"></i></div>
@@ -236,10 +246,10 @@
                         <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-300" id="contact-schedule"></ul>
                     </div>
                     <div class="w-full h-64 rounded-xl overflow-hidden shadow-md border border-gray-200 dark:border-gray-700 relative">
-                        <iframe title="Map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115408.23984033757!2d55.15622421251399!3d25.161048427509506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f43496ad9c645%3A0xbde66e5084295162!2sDubai%20-%20United%20Arab%20Emirates!5e0!3m2!1sen!2s!4v1646832654321!5m2!1sen!2s" width="100%" height="100%" style="border:0;" allowFullScreen="" loading="lazy"></iframe>
+                        <iframe title="Map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115408.23984033757!2d55.15622421251399!3d25.161048427509506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f43496ad9c645%3A0xbde66e5084295162!2sDubai%20-%20United%20Arab%20Emirates!5e0!3m2!1sen!2s!4v1646832654321!5m2!1sen!2s" width="100%" height="100%" class="map-frame" allowFullScreen="" loading="lazy"></iframe>
                     </div>
                 </div>
-                <form class="card-panel p-8 space-y-5" action="https://formsubmit.co/info@youragentlab.com" method="POST">
+                <form class="card-panel p-6 md:p-8 space-y-5 order-1 lg:order-2" action="https://formsubmit.co/info@youragentlab.com" method="POST">
                     <input type="hidden" name="_subject" value="Nuevo Lead - YourAgentLab">
                     <input type="hidden" name="_captcha" value="false">
                     <input type="hidden" name="_template" value="table">
