@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="it" class="dark">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>YourAgentLab - Escala tu negocio con IA</title>
-    <meta name="description" content="Auditoría, Roadmap y Automatización con IA para empresas." />
+    <title>YourAgentLab - Agenti AI e Automazione per Aziende</title>
+    <meta name="description" content="Audit, Roadmap e Automazione AI per le aziende." />
     
     <link rel="stylesheet" href="styles.css">
     
@@ -20,7 +20,7 @@
             theme: {
                 extend: {
                     colors: {
-                        teal: { // Mantenemos compatibilidad aunque usemos morado en CSS
+                        teal: { 
                             50: '#f0fdfa',
                             100: '#ccfbf1',
                             900: '#134e4a',
@@ -42,13 +42,13 @@
                     <span class="text-2xl font-bold text-primary tracking-tight font-heading">YourAgentLab</span>
                 </div>
                 <div class="hidden md:flex items-center space-x-6">
-                    <a href="#home" class="btn-nav" data-i18n="nav.home">Inicio</a>
-                    <a href="#audit" class="btn-nav" data-i18n="nav.audit">Auditoría</a>
-                    <a href="#sprints" class="btn-nav" data-i18n="nav.sprints">Sprints</a>
-                    <a href="#about" class="btn-nav" data-i18n="nav.about">Nosotros</a>
-                    <a href="#team" class="btn-nav" data-i18n="nav.team">Equipo</a>
+                    <a href="#home" class="btn-nav" data-i18n="nav.home">Home</a>
+                    <a href="#audit" class="btn-nav" data-i18n="nav.audit">Audit</a>
+                    <a href="#sprints" class="btn-nav" data-i18n="nav.sprints">Sprint</a>
+                    <a href="#about" class="btn-nav" data-i18n="nav.about">Chi Siamo</a>
+                    <a href="#team" class="btn-nav" data-i18n="nav.team">Team</a>
                     <a href="#faq" class="btn-nav" data-i18n="nav.faq">FAQ</a>
-                    <a href="#contact" class="btn-nav" data-i18n="nav.contact">Contacto</a>
+                    <a href="#contact" class="btn-nav" data-i18n="nav.contact">Contatti</a>
                 </div>
                 <div class="hidden md:flex items-center space-x-4">
                     <button onclick="toggleTheme()" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
@@ -58,11 +58,11 @@
                     <div class="relative">
                         <button onclick="toggleLangMenu(event)" class="flex items-center gap-1 p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
                             <i data-lucide="globe" class="text-gray-600 dark:text-gray-300"></i>
-                            <span id="current-lang-label" class="text-sm font-semibold text-gray-600 dark:text-gray-300">ES</span>
+                            <span id="current-lang-label" class="text-sm font-semibold text-gray-600 dark:text-gray-300">IT</span>
                         </button>
                         <div id="lang-dropdown" class="absolute right-0 mt-2 w-32 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-md hidden py-1 shadow-lg">
-                            <button onclick="setLanguage('es')" class="block w-full text-left px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-700">🇪🇸 Español</button>
                             <button onclick="setLanguage('it')" class="block w-full text-left px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-700">🇮🇹 Italiano</button>
+                            <button onclick="setLanguage('es')" class="block w-full text-left px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-700">🇪🇸 Español</button>
                             <button onclick="setLanguage('en')" class="block w-full text-left px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-700">🇬🇧 English</button>
                         </div>
                     </div>
@@ -76,37 +76,38 @@
         </div>
         <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700 p-4 absolute w-full left-0 z-50 shadow-lg">
              <div class="space-y-4">
-                <a href="#home" onclick="toggleMobileMenu()" class="block font-medium hover:text-primary" data-i18n="nav.home">Inicio</a>
-                <a href="#audit" onclick="toggleMobileMenu()" class="block font-medium hover:text-primary" data-i18n="nav.audit">Auditoría</a>
-                <a href="#sprints" onclick="toggleMobileMenu()" class="block font-medium hover:text-primary" data-i18n="nav.sprints">Sprints</a>
-                <a href="#about" onclick="toggleMobileMenu()" class="block font-medium hover:text-primary" data-i18n="nav.about">Nosotros</a>
-                <a href="#contact" onclick="toggleMobileMenu()" class="block font-medium hover:text-primary" data-i18n="nav.contact">Contacto</a>
+                <a href="#home" onclick="toggleMobileMenu()" class="block font-medium hover:text-primary" data-i18n="nav.home">Home</a>
+                <a href="#audit" onclick="toggleMobileMenu()" class="block font-medium hover:text-primary" data-i18n="nav.audit">Audit</a>
+                <a href="#sprints" onclick="toggleMobileMenu()" class="block font-medium hover:text-primary" data-i18n="nav.sprints">Sprint</a>
+                <a href="#about" onclick="toggleMobileMenu()" class="block font-medium hover:text-primary" data-i18n="nav.about">Chi Siamo</a>
+                <a href="#contact" onclick="toggleMobileMenu()" class="block font-medium hover:text-primary" data-i18n="nav.contact">Contatti</a>
              </div>
              <div class="mt-6 pt-4 border-t border-gray-200 dark:border-gray-700 flex justify-between items-center">
                 <button onclick="toggleTheme()" class="flex gap-2 font-medium">Tema</button>
                 <div class="flex gap-3">
-                    <button onclick="setLanguage('es'); toggleMobileMenu()" class="font-bold">ES</button>
                     <button onclick="setLanguage('it'); toggleMobileMenu()" class="font-bold">IT</button>
+                    <button onclick="setLanguage('es'); toggleMobileMenu()" class="font-bold">ES</button>
                     <button onclick="setLanguage('en'); toggleMobileMenu()" class="font-bold">EN</button>
                 </div>
              </div>
         </div>
     </nav>
 
-    <section id="home" class="relative pt-24 pb-32 flex items-center justify-center min-h-[90vh]">
+    <section id="home" class="relative pt-24 pb-32 flex items-center justify-center min-h-[90vh] bg-cover bg-center bg-no-repeat" style="background-image: url('ajedres.webp');">
+        <div class="absolute inset-0 bg-black/70 z-0"></div>
         <div class="max-w-7xl mx-auto px-4 text-center sm:px-6 lg:px-8 relative z-10">
-            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 text-gray-900 dark:text-white font-heading" data-aos="fade-down">
-                <span data-i18n="hero.h1">Ahorra tiempo, reduce errores y escala tu negocio con IA</span>
+            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 text-white font-heading" data-aos="fade-down">
+                <span data-i18n="hero.h1">Libera tempo, elimina errori e scala il tuo lavoro con l'IA</span>
             </h1>
-            <p class="mt-6 text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-10 leading-relaxed" data-aos="fade-up" data-aos-delay="200" data-i18n="hero.sub">
-                Te entregamos un plan claro...
+            <p class="mt-6 text-xl text-gray-200 max-w-3xl mx-auto mb-10 leading-relaxed" data-aos="fade-up" data-aos-delay="200" data-i18n="hero.sub">
+                Ti consegniamo un piano chiaro...
             </p>
             <div class="flex flex-col sm:flex-row justify-center gap-4" data-aos="fade-up" data-aos-delay="400">
                 <button onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" class="btn btn-primary" data-i18n="hero.cta1">
-                    Agenda una llamada gratuita
+                    Prenota una call gratuita
                 </button>
-                <a href="#deliverables" class="btn bg-white dark:bg-gray-800 text-gray-900 dark:text-white border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-700" data-i18n="hero.cta2">
-                    Ver un ejemplo real
+                <a href="#deliverables" class="btn bg-transparent text-white border border-white hover:bg-white/10 transition-colors" data-i18n="hero.cta2">
+                    Guarda un esempio reale
                 </a>
             </div>
         </div>
@@ -114,12 +115,12 @@
 
     <section id="who-we-help" class="py-16 bg-white dark:bg-gray-950 border-b border-gray-100 dark:border-gray-800">
         <div class="max-w-4xl mx-auto px-4 text-center" data-aos="fade-up">
-            <h2 class="text-2xl font-bold text-primary mb-4 font-heading uppercase tracking-wider" data-i18n="who.title">A Quién Ayudamos</h2>
+            <h2 class="text-2xl font-bold text-primary mb-4 font-heading uppercase tracking-wider" data-i18n="who.title">Chi Aiutiamo</h2>
             <h3 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6 font-heading" data-i18n="who.subtitle">
-                Para negocios que quieren resultados reales
+                Parliamo a chi vuole risultati, non solo tecnologia
             </h3>
             <p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed" data-i18n="who.text">
-                Ayudamos a freelancers...
+                Aiutiamo freelance...
             </p>
         </div>
     </section>
@@ -129,24 +130,22 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <div data-aos="fade-right">
                     <span class="px-3 py-1 rounded-full bg-primary/10 text-primary font-bold text-sm tracking-wide mb-4 inline-block">FASE 1</span>
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6 font-heading" data-i18n="audit.title">Auditoría Operativa + Roadmap</h2>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6 font-heading" data-i18n="audit.title">AI Operations Audit + Roadmap</h2>
                     <p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-8" data-i18n="audit.desc">
-                        Analizamos tus procesos...
+                        Analizziamo i tuoi processi...
                     </p>
                     
-                    <h4 class="font-bold text-gray-900 dark:text-white mb-4" data-i18n="audit.deliverablesTitle">Entregables:</h4>
+                    <h4 class="font-bold text-gray-900 dark:text-white mb-4" data-i18n="audit.deliverablesTitle">Deliverable:</h4>
                     <ul class="space-y-3 mb-8" id="audit-list">
                         </ul>
 
                     <div class="flex gap-4">
-                        <button onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" class="btn btn-primary" data-i18n="audit.cta">Agenda auditoría</button>
+                        <button onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" class="btn btn-primary" data-i18n="audit.cta">Prenota Audit gratuito</button>
                     </div>
                 </div>
-                <div class="card-panel p-2 shadow-2xl rotate-2" data-aos="fade-left">
-                    <div class="bg-gray-100 dark:bg-gray-800 rounded-xl p-6 h-full flex flex-col justify-center items-center min-h-[300px] border border-gray-200 dark:border-gray-700">
-                         <i data-lucide="map" class="w-24 h-24 text-primary mb-4 opacity-80"></i>
-                         <p class="font-heading font-bold text-xl text-center text-gray-700 dark:text-gray-200">Roadmap 30/60/90</p>
-                    </div>
+                
+                <div class="card-panel p-0 shadow-2xl rotate-2 h-fit" data-aos="fade-left">
+                     <img src="road.webp" alt="Roadmap AI" class="w-full h-auto rounded-2xl block">
                 </div>
             </div>
         </div>
@@ -156,19 +155,19 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16" data-aos="fade-up">
                 <span class="px-3 py-1 rounded-full bg-primary/10 text-primary font-bold text-sm tracking-wide mb-4 inline-block">FASE 2</span>
-                <h2 class="section-title font-heading" data-i18n="sprints.title">Sprints de Implementación</h2>
-                <p class="section-subtitle" data-i18n="sprints.subtitle">Elige uno o más sprints para soluciones concretas.</p>
+                <h2 class="section-title font-heading" data-i18n="sprints.title">Sprint di Implementazione</h2>
+                <p class="section-subtitle" data-i18n="sprints.subtitle">Dopo l'audit, scegli uno o più Sprint per implementare automazioni concrete.</p>
             </div>
             
             <div class="relative max-w-5xl mx-auto">
                 <button onclick="changeService(-1)" class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 p-2 bg-white dark:bg-gray-800 shadow-lg rounded-full text-primary border border-gray-200 dark:border-gray-700 hover:bg-teal-50 dark:hover:bg-gray-700 transition-colors"><i data-lucide="chevron-left"></i></button>
                 <button onclick="changeService(1)" class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 p-2 bg-white dark:bg-gray-800 shadow-lg rounded-full text-primary border border-gray-200 dark:border-gray-700 hover:bg-teal-50 dark:hover:bg-gray-700 transition-colors"><i data-lucide="chevron-right"></i></button>
 
-                <div id="service-card" class="card-panel p-8 md:p-12 flex flex-col md:flex-row items-center gap-12 min-h-[400px]" data-aos="zoom-in">
+                <div id="service-card" class="card-panel p-8 md:p-12 flex flex-col md:flex-row items-center gap-12 min-h-[450px]" data-aos="zoom-in">
                     </div>
                 
                 <div class="mt-10 text-center">
-                    <button onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" class="btn btn-primary" data-i18n="sprints.cta">Escoge tu sprint</button>
+                    <button onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" class="btn btn-primary" data-i18n="sprints.cta">Scegli il tuo Sprint</button>
                 </div>
             </div>
         </div>
@@ -176,10 +175,10 @@
 
     <section id="deliverables" class="py-24 bg-teal-50 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="section-title font-heading mb-6" data-i18n="deliverables.title">Ejemplos de Deliverables</h2>
-            <p class="section-subtitle mb-12" data-i18n="deliverables.subtitle">Qué verás en el entregable final.</p>
+            <h2 class="section-title font-heading mb-6" data-i18n="deliverables.title">Esempi Deliverable</h2>
+            <p class="section-subtitle mb-12" data-i18n="deliverables.subtitle">Cosa vedrai nella consegna finale.</p>
             
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8" id="deliverables-grid">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" id="deliverables-grid">
                 </div>
          </div>
     </section>
@@ -187,15 +186,12 @@
     <section id="about" class="py-24 bg-white dark:bg-gray-950">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="max-w-3xl mx-auto text-center mb-20" data-aos="fade-up">
-                <h2 class="section-title font-heading" data-i18n="about.title">Sobre Nosotros</h2>
-                <div class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed space-y-4" data-i18n="about.text">
-                    </div>
+                <h2 class="section-title font-heading" data-i18n="about.title">Chi Siamo</h2>
+                <div class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed space-y-4" data-i18n="about.text"></div>
             </div>
-
             <div id="team" class="scroll-mt-24">
-                <h3 class="text-3xl font-bold text-center mb-12 font-heading text-gray-900 dark:text-white" data-i18n="team.title">Nuestro Equipo</h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6" id="team-grid">
-                    </div>
+                <h3 class="text-3xl font-bold text-center mb-12 font-heading text-gray-900 dark:text-white" data-i18n="team.title">Il Nostro Team</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6" id="team-grid"></div>
             </div>
         </div>
     </section>
@@ -210,10 +206,9 @@
     <section id="contact" class="py-24 border-t border-gray-200 dark:border-gray-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="mb-16 text-center">
-                <h2 class="section-title font-heading" data-i18n="contact.title">¿Listo para comenzar?</h2>
+                <h2 class="section-title font-heading" data-i18n="contact.title">Pronto a partire?</h2>
             </div>
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                
                 <div class="space-y-8">
                     <div class="grid grid-cols-1 gap-6">
                         <div class="flex items-start gap-4">
@@ -233,7 +228,6 @@
                             </div>
                         </div>
                     </div>
-                    
                     <div class="card-panel p-6">
                         <div class="flex items-center gap-3 mb-4">
                             <i data-lucide="clock" class="text-primary"></i>
@@ -241,27 +235,22 @@
                         </div>
                         <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-300" id="contact-schedule"></ul>
                     </div>
-
                     <div class="w-full h-64 rounded-xl overflow-hidden shadow-md border border-gray-200 dark:border-gray-700 relative">
                         <iframe title="Map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115408.23984033757!2d55.15622421251399!3d25.161048427509506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f43496ad9c645%3A0xbde66e5084295162!2sDubai%20-%20United%20Arab%20Emirates!5e0!3m2!1sen!2s!4v1646832654321!5m2!1sen!2s" width="100%" height="100%" style="border:0;" allowFullScreen="" loading="lazy"></iframe>
                     </div>
                 </div>
-
                 <form class="card-panel p-8 space-y-5" action="https://formsubmit.co/info@youragentlab.com" method="POST">
-                    
                     <input type="hidden" name="_subject" value="Nuevo Lead - YourAgentLab">
                     <input type="hidden" name="_captcha" value="false">
                     <input type="hidden" name="_template" value="table">
-
-                    <h3 class="text-xl font-bold mb-4 text-gray-900 dark:text-white font-heading" data-i18n="contact.formTitle">Agenda tu llamada</h3>
-                    
+                    <h3 class="text-xl font-bold mb-4 text-gray-900 dark:text-white font-heading" data-i18n="contact.formTitle">Prenota la tua call</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
                         <div>
-                            <label class="block text-sm font-medium mb-1 text-gray-700 dark:text-gray-300" data-i18n="contact.form.name">Nombre</label>
+                            <label class="block text-sm font-medium mb-1 text-gray-700 dark:text-gray-300" data-i18n="contact.form.name">Nome</label>
                             <input type="text" name="name" class="form-input" required>
                         </div>
                         <div>
-                            <label class="block text-sm font-medium mb-1 text-gray-700 dark:text-gray-300" data-i18n="contact.form.company">Empresa</label>
+                            <label class="block text-sm font-medium mb-1 text-gray-700 dark:text-gray-300" data-i18n="contact.form.company">Azienda</label>
                             <input type="text" name="company" class="form-input">
                         </div>
                     </div>
@@ -271,16 +260,15 @@
                             <input type="email" name="email" class="form-input" required>
                         </div>
                         <div>
-                            <label class="block text-sm font-medium mb-1 text-gray-700 dark:text-gray-300" data-i18n="contact.form.phone">Teléfono</label>
+                            <label class="block text-sm font-medium mb-1 text-gray-700 dark:text-gray-300" data-i18n="contact.form.phone">Telefono</label>
                             <input type="tel" name="phone" class="form-input">
                         </div>
                     </div>
                     <div>
-                        <label class="block text-sm font-medium mb-1 text-gray-700 dark:text-gray-300" data-i18n="contact.form.msg">Mensaje</label>
+                        <label class="block text-sm font-medium mb-1 text-gray-700 dark:text-gray-300" data-i18n="contact.form.msg">Messaggio</label>
                         <textarea name="message" rows="4" class="form-input" required></textarea>
                     </div>
-                    
-                    <button class="btn btn-primary w-full" data-i18n="contact.form.send">Enviar</button>
+                    <button class="btn btn-primary w-full" data-i18n="contact.form.send">Invia</button>
                 </form>
             </div>
         </div>
@@ -291,17 +279,17 @@
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
                 <div>
                     <h3 class="text-2xl font-bold mb-4 font-heading">YourAgentLab</h3>
-                    <p class="text-sm text-teal-100" data-i18n="footer.tagline">IA & Automatización</p>
+                    <p class="text-sm text-teal-100" data-i18n="footer.tagline">IA & Automazione</p>
                 </div>
                 <div>
-                    <h4 class="font-bold mb-4" data-i18n="footer.linksTitle">Enlaces</h4>
+                    <h4 class="font-bold mb-4" data-i18n="footer.linksTitle">Link</h4>
                     <ul class="space-y-2 text-sm text-teal-100">
-                        <li><a href="#audit" class="hover:text-white" data-i18n="nav.audit">Auditoría</a></li>
-                        <li><a href="#sprints" class="hover:text-white" data-i18n="nav.sprints">Sprints</a></li>
+                        <li><a href="#audit" class="hover:text-white" data-i18n="nav.audit">Audit</a></li>
+                        <li><a href="#sprints" class="hover:text-white" data-i18n="nav.sprints">Sprint</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="font-bold mb-4" data-i18n="footer.legalTitle">Legal</h4>
+                    <h4 class="font-bold mb-4" data-i18n="footer.legalTitle">Legale</h4>
                     <ul class="space-y-2 text-sm text-teal-100">
                         <li><a href="#" onclick="openPrivacyModal(event)" class="hover:text-white" data-i18n="footer.privacy">Privacy</a></li>
                     </ul>
@@ -319,7 +307,7 @@
                 </div>
             </div>
             <div class="border-t border-teal-700 pt-8 text-sm text-teal-200">
-                © <span id="year"></span> YourAgentLab. <span data-i18n="footer.rights">Rights reserved.</span>
+                © <span id="year"></span> YourAgentLab. <span data-i18n="footer.rights">Tutti i diritti riservati.</span>
             </div>
         </div>
     </footer>

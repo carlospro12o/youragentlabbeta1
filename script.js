@@ -1,6 +1,6 @@
 /**
  * ==========================================
- * script.js - Lógica Principal (YourAgentLab - Estructura Guía PDF Completa)
+ * script.js - Lógica Principal (Animaciones + Estructura PDF)
  * ==========================================
  */
 
@@ -35,10 +35,10 @@ const CONTENT = {
             subtitle: 'Después de la auditoría, elige uno o más sprints para implementar soluciones de automatización concretas.',
             cta: 'Escoge tu sprint',
             items: [
-                { title: 'Sprint 1', subtitle: 'Lead & CRM Automation', desc: 'Automatiza captación, calificación y seguimiento de leads mediante CRM.', icon: 'users' },
-                { title: 'Sprint 2', subtitle: 'Customer Care Automation', desc: 'Soporte 24/7 con respuestas automatizadas, chatbot y voicebot.', icon: 'message-circle' },
-                { title: 'Sprint 3', subtitle: 'Finance Ops Automation', desc: 'Automatiza facturación, pagos, conciliaciones y reportes.', icon: 'dollar-sign' },
-                { title: 'Sprint 4', subtitle: 'Internal Ops Automation', desc: 'Automatiza tareas internas, onboarding y dashboards operativos.', icon: 'settings' }
+                { title: 'Sprint 1', subtitle: 'Lead & CRM Automation', desc: 'Automatiza captación, calificación y seguimiento de leads mediante CRM.', image: 'sprint1.webp' },
+                { title: 'Sprint 2', subtitle: 'Customer Care Automation', desc: 'Soporte 24/7 con respuestas automatizadas, chatbot y voicebot.', image: 'sprint2.webp' },
+                { title: 'Sprint 3', subtitle: 'Finance Ops Automation', desc: 'Automatiza facturación, pagos, conciliaciones y reportes.', image: 'sprint3.webp' },
+                { title: 'Sprint 4', subtitle: 'Internal Ops Automation', desc: 'Automatiza tareas internas, onboarding y dashboards operativos.', image: 'sprint4.webp' }
             ]
         },
         deliverables: {
@@ -47,7 +47,8 @@ const CONTENT = {
             items: [
                 { title: 'Panel Notion', desc: 'Documentación de procesos y métricas clave.', icon: 'layout' },
                 { title: 'Diagrama Miro', desc: 'Flujo visual de cada paso de la automatización.', icon: 'share-2' },
-                { title: 'Checklist', desc: 'Prioridades basadas en impacto, costo y tiempo.', icon: 'check-square' }
+                { title: 'Checklist', desc: 'Prioridades basadas en impacto, costo y tiempo.', icon: 'check-square' },
+                { title: 'Video Walkthrough', desc: 'Explicación completa de cada sección.', icon: 'play-circle' } 
             ]
         },
         about: {
@@ -116,10 +117,10 @@ const CONTENT = {
             subtitle: 'Sprint operativi per automazioni reali. Dopo l\'audit, puoi scegliere uno o più Sprint per implementare automazioni con risultati concreti.',
             cta: 'Scegli il tuo Sprint',
             items: [
-                { title: 'Sprint 1', subtitle: 'Lead & CRM Automation', desc: 'Automatizza acquisizione e qualificazione lead, follow-up automatico, integrazione CRM.', icon: 'users' },
-                { title: 'Sprint 2', subtitle: 'Customer Care Automation', desc: 'Assistenza 24/7 con chatbot e voicebot, gestione ticket, risposte automatiche.', icon: 'message-circle' },
-                { title: 'Sprint 3', subtitle: 'Finance Ops Automation', desc: 'Automatizza fatturazione, pagamenti, riconciliazioni, reportistica.', icon: 'dollar-sign' },
-                { title: 'Sprint 4', subtitle: 'Internal Ops Automation', desc: 'Task interni, onboarding, notifiche e dashboard operativi.', icon: 'settings' }
+                { title: 'Sprint 1', subtitle: 'Lead & CRM Automation', desc: 'Automatizza acquisizione e qualificazione lead, follow-up automatico, integrazione CRM.', image: 'sprint1.webp' },
+                { title: 'Sprint 2', subtitle: 'Customer Care Automation', desc: 'Assistenza 24/7 con chatbot e voicebot, gestione ticket, risposte automatiche.', image: 'sprint2.webp' },
+                { title: 'Sprint 3', subtitle: 'Finance Ops Automation', desc: 'Automatizza fatturazione, pagamenti, riconciliazioni, reportistica.', image: 'sprint3.webp' },
+                { title: 'Sprint 4', subtitle: 'Internal Ops Automation', desc: 'Task interni, onboarding, notifiche e dashboard operativi.', image: 'sprint4.webp' }
             ]
         },
         deliverables: {
@@ -128,7 +129,8 @@ const CONTENT = {
             items: [
                 { title: 'Dashboard Notion', desc: 'Mappatura processi e metriche.', icon: 'layout' },
                 { title: 'Flow Miro', desc: 'Step di automazione e priorità.', icon: 'share-2' },
-                { title: 'Checklist priorità', desc: 'Impatto / costi / tempi.', icon: 'check-square' }
+                { title: 'Checklist priorità', desc: 'Impatto / costi / tempi.', icon: 'check-square' },
+                { title: 'Video Walkthrough', desc: 'Spiegazione di ogni sezione.', icon: 'play-circle' } 
             ]
         },
         about: {
@@ -197,10 +199,10 @@ const CONTENT = {
             subtitle: 'Actionable sprints for real automation. After the audit, choose one or more sprints to implement tangible automation solutions.',
             cta: 'Choose your sprint',
             items: [
-                { title: 'Sprint 1', subtitle: 'Lead & CRM Automation', desc: 'Automate lead capture, qualification and CRM follow-up.', icon: 'users' },
-                { title: 'Sprint 2', subtitle: 'Customer Care Automation', desc: '24/7 support with automated responses, chatbot and voicebot.', icon: 'message-circle' },
-                { title: 'Sprint 3', subtitle: 'Finance Ops Automation', desc: 'Automate invoicing, payments, reconciliation and reports.', icon: 'dollar-sign' },
-                { title: 'Sprint 4', subtitle: 'Internal Ops Automation', desc: 'Internal task automation, onboarding and operational dashboards.', icon: 'settings' }
+                { title: 'Sprint 1', subtitle: 'Lead & CRM Automation', desc: 'Automate lead capture, qualification and CRM follow-up.', image: 'sprint1.webp' },
+                { title: 'Sprint 2', subtitle: 'Customer Care Automation', desc: '24/7 support with automated responses, chatbot and voicebot.', image: 'sprint2.webp' },
+                { title: 'Sprint 3', subtitle: 'Finance Ops Automation', desc: 'Automate invoicing, payments, reconciliation and reports.', image: 'sprint3.webp' },
+                { title: 'Sprint 4', subtitle: 'Internal Ops Automation', desc: 'Internal task automation, onboarding and operational dashboards.', image: 'sprint4.webp' }
             ]
         },
         deliverables: {
@@ -209,7 +211,8 @@ const CONTENT = {
             items: [
                 { title: 'Notion dashboard', desc: 'Processes and metrics.', icon: 'layout' },
                 { title: 'Miro flow chart', desc: 'Automation steps and priorities.', icon: 'share-2' },
-                { title: 'Priority checklist', desc: 'Impact / cost / time.', icon: 'check-square' }
+                { title: 'Priority checklist', desc: 'Impact / cost / time.', icon: 'check-square' },
+                { title: 'Walkthrough video', desc: 'Full explanation of every section.', icon: 'play-circle' } 
             ]
         },
         about: {
@@ -251,7 +254,7 @@ const CONTENT = {
 };
 
 // --- 2. STATE ---
-let currentLang = 'es'; // Default to Spanish as per user guide
+let currentLang = 'it'; // Default to Italian
 let currentServiceIdx = 0;
 
 // --- 3. INITIALIZATION ---
@@ -298,12 +301,39 @@ window.toggleMobileMenu = function() {
     document.getElementById('mobile-menu')?.classList.toggle('hidden');
 };
 
+// ANIMATION LOGIC FOR SPRINTS
 window.changeService = function(dir) {
-    const items = CONTENT[currentLang].sprints.items;
-    currentServiceIdx = (currentServiceIdx + dir + items.length) % items.length;
-    renderSprintCard(items[currentServiceIdx]);
-    if (window.lucide) window.lucide.createIcons();
+    const card = document.getElementById('service-card');
+    if (!card) return;
+
+    // 1. Exit Animation (Slide out)
+    // Se desplaza 20px en la dirección contraria para dar efecto de "irse"
+    // y baja opacidad a 0.
+    card.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+    card.style.opacity = '0';
+    card.style.transform = dir > 0 ? 'translateX(-20px)' : 'translateX(20px)';
+    
+    // 2. Wait for exit animation, then update content
+    setTimeout(() => {
+        const items = CONTENT[currentLang].sprints.items;
+        currentServiceIdx = (currentServiceIdx + dir + items.length) % items.length;
+        renderSprintCard(items[currentServiceIdx]);
+        if (window.lucide) window.lucide.createIcons();
+
+        // 3. Prepare Enter Animation (Slide in)
+        // Posicionamos el elemento en el lado opuesto (sin transición para que sea instantáneo)
+        card.style.transition = 'none'; 
+        card.style.transform = dir > 0 ? 'translateX(20px)' : 'translateX(-20px)';
+        
+        // 4. Trigger Enter Animation (Back to center)
+        setTimeout(() => {
+            card.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+            card.style.opacity = '1';
+            card.style.transform = 'translateX(0)';
+        }, 50); // Breve retardo para asegurar que el navegador registre el cambio de posición
+    }, 300); // 300ms coincide con la duración de la transición
 };
+
 
 window.openPrivacyModal = function(event) {
     if (event) event.preventDefault();
@@ -369,17 +399,16 @@ function renderSprintCard(item) {
         `<span class="block h-2 rounded-full transition-all duration-300 ${i === currentServiceIdx ? 'w-8 bg-primary' : 'w-2 bg-gray-300 dark:bg-gray-600'}"></span>`
     ).join('');
     
+    // Updated Layout: Left side image, Right side text
     container.innerHTML = `
-        <div class="flex-shrink-0 w-full md:w-1/3 flex flex-col items-center">
-            <div class="w-32 h-32 md:w-48 md:h-48 bg-teal-100 dark:bg-teal-900/50 rounded-full flex items-center justify-center animate-pulse-slow mb-6">
-                <i data-lucide="${item.icon}" class="text-primary w-16 h-16 md:w-24 md:h-24"></i>
-            </div>
-            <div class="flex gap-2 mt-4">${dots}</div>
+        <div class="flex-shrink-0 w-full md:w-1/2 flex flex-col items-center justify-center mb-8 md:mb-0">
+            <img src="${item.image}" alt="${item.title}" class="w-full max-w-[350px] rounded-2xl shadow-2xl hover:scale-105 transition-transform duration-300 border border-gray-200 dark:border-gray-700">
+            <div class="flex gap-2 mt-8">${dots}</div>
         </div>
-        <div class="text-center md:text-left flex-grow w-full md:w-2/3">
+        <div class="text-center md:text-left flex-grow w-full md:w-1/2 md:pl-8">
             <h3 class="text-3xl md:text-4xl font-bold text-primary mb-2 font-heading">${item.title}</h3>
-            <h4 class="text-xl font-bold mb-6 tracking-wide opacity-90">${item.subtitle}</h4>
-            <p class="text-lg opacity-70 leading-relaxed mb-8">${item.desc}</p>
+            <h4 class="text-xl font-bold mb-6 tracking-wide opacity-90 text-gray-900 dark:text-white">${item.subtitle}</h4>
+            <p class="text-lg opacity-70 leading-relaxed mb-8 text-gray-700 dark:text-gray-300">${item.desc}</p>
         </div>
     `;
 }
