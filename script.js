@@ -1,6 +1,6 @@
 /**
  * ==========================================
- * script.js - Lógica Principal (Animaciones + Estructura PDF)
+ * script.js - Lógica Principal (Contenido + Animaciones)
  * ==========================================
  */
 
@@ -85,7 +85,68 @@ const CONTENT = {
         contact: { title: '¿Listo para comenzar?', scheduleTitle: 'Horario', schedule: ['Lunes - Viernes: 9:00 - 18:00', 'Sábado: 10:00 - 14:00'], formTitle: 'Agenda tu llamada', form: {name:'Nombre', company:'Empresa', email:'Email', phone:'Teléfono', msg:'Mensaje', send:'Enviar'} },
         whatsapp: 'Chatea en WhatsApp', 
         footer: { tagline: 'Soluciones de Automatización e IA.', linksTitle: 'Enlaces', legalTitle: 'Legal', socialTitle: 'Síguenos', privacy: 'Política de Privacidad', rights: 'Todos los derechos reservados.' },
-        privacy: `<h2 class="text-2xl font-bold mb-4">Política de Privacidad</h2><p>YourAgentLab respeta su privacidad...</p>`
+        
+        // --- POLÍTICA DE PRIVACIDAD EN ESPAÑOL ---
+        privacy: `
+            <h2 class="text-2xl font-bold mb-4 font-heading text-primary">Política de Privacidad</h2>
+            <p class="mb-4 text-sm text-gray-500"><strong>Última actualización:</strong> 12 de Noviembre de 2025</p>
+            
+            <h3 class="text-lg font-bold mt-6 mb-2 font-heading">1. Introducción</h3>
+            <p class="mb-2">YourAgentLab ("nosotros", "nuestro") respeta su privacidad y se compromete a proteger sus datos personales. Esta política de privacidad le informa sobre cómo tratamos sus datos personales cuando visita nuestro sitio web y le informa sobre sus derechos de privacidad y cómo la ley lo protege.</p>
+
+            <h3 class="text-lg font-bold mt-6 mb-2 font-heading">2. Datos que Recopilamos</h3>
+            <p class="mb-2">Podemos recopilar, utilizar, almacenar y transferir diferentes tipos de datos personales sobre usted:</p>
+            <ul class="list-disc pl-5 mb-2 space-y-1">
+                <li><strong>Datos de identidad:</strong> nombre, apellido.</li>
+                <li><strong>Datos de contacto:</strong> dirección de correo electrónico, número de teléfono.</li>
+                <li><strong>Datos empresariales:</strong> nombre de la empresa, sector.</li>
+                <li><strong>Datos técnicos:</strong> dirección IP, tipo de navegador, zona horaria.</li>
+                <li><strong>Datos de uso:</strong> información sobre cómo utiliza nuestro sitio web.</li>
+            </ul>
+
+            <h3 class="text-lg font-bold mt-6 mb-2 font-heading">3. Cómo Utilizamos sus Datos</h3>
+            <p class="mb-2">Utilizamos sus datos personales para:</p>
+            <ul class="list-disc pl-5 mb-2 space-y-1">
+                <li>Responder a sus solicitudes de información.</li>
+                <li>Proporcionarle nuestros servicios.</li>
+                <li>Mejorar nuestro sitio web y nuestros servicios.</li>
+                <li>Enviarle comunicaciones de marketing (solo con su consentimiento).</li>
+                <li>Cumplir con obligaciones legales.</li>
+            </ul>
+
+            <h3 class="text-lg font-bold mt-6 mb-2 font-heading">4. Base Jurídica del Tratamiento</h3>
+            <p class="mb-2">Tratamos sus datos personales basándonos en su consentimiento, para la ejecución de un contrato, para cumplir con obligaciones legales o para perseguir nuestros intereses comerciales legítimos.</p>
+
+            <h3 class="text-lg font-bold mt-6 mb-2 font-heading">5. Compartir Datos</h3>
+            <p class="mb-2">No vendemos sus datos personales a terceros. Podemos compartir sus datos con proveedores de servicios que nos ayudan a gestionar nuestro negocio (por ejemplo, hosting, email marketing), siempre cumpliendo con el RGPD.</p>
+
+            <h3 class="text-lg font-bold mt-6 mb-2 font-heading">6. Seguridad de los Datos</h3>
+            <p class="mb-2">Hemos implementado medidas de seguridad adecuadas para prevenir la pérdida, el uso indebido o la alteración de sus datos personales. Todos los datos están encriptados y almacenados en servidores seguros.</p>
+
+            <h3 class="text-lg font-bold mt-6 mb-2 font-heading">7. Sus Derechos</h3>
+            <p class="mb-2">De acuerdo con el RGPD, usted tiene derecho a:</p>
+            <ul class="list-disc pl-5 mb-2 space-y-1">
+                <li>Acceder a sus datos personales.</li>
+                <li>Rectificar datos inexactos.</li>
+                <li>Solicitar la eliminación de sus datos.</li>
+                <li>Oponerse al tratamiento de sus datos.</li>
+                <li>Solicitar la limitación del tratamiento.</li>
+                <li>Solicitar la portabilidad de los datos.</li>
+                <li>Retirar el consentimiento en cualquier momento.</li>
+            </ul>
+
+            <h3 class="text-lg font-bold mt-6 mb-2 font-heading">8. Cookies</h3>
+            <p class="mb-2">Utilizamos cookies esenciales para el funcionamiento del sitio y cookies analíticas para mejorar la experiencia del usuario. Puede gestionar sus preferencias de cookies a través del banner presente en el sitio.</p>
+
+            <h3 class="text-lg font-bold mt-6 mb-2 font-heading">9. Conservación de Datos</h3>
+            <p class="mb-2">Conservamos sus datos personales solo durante el tiempo necesario para los fines para los que fueron recopilados, incluidos los requisitos legales, contables o de informes.</p>
+
+            <h3 class="text-lg font-bold mt-6 mb-2 font-heading">10. Contacto</h3>
+            <p class="mb-2">Para cualquier pregunta sobre esta política de privacidad o para ejercer sus derechos, contáctenos en: <a href="mailto:privacy@youragentlab.com" class="text-primary hover:underline">privacy@youragentlab.com</a></p>
+
+            <h3 class="text-lg font-bold mt-6 mb-2 font-heading">11. Cambios en esta Política</h3>
+            <p class="mb-2">Nos reservamos el derecho de actualizar esta política de privacidad en cualquier momento. Le informaremos de cualquier cambio publicando la nueva política en esta página.</p>
+        `
     },
     it: {
         nav: { home: 'Home', audit: 'Audit & Roadmap', sprints: 'Sprint', about: 'Chi Siamo', team: 'Team', faq: 'FAQ', contact: 'Contatti' },
@@ -167,7 +228,68 @@ const CONTENT = {
         contact: { title: 'Pronto a partire?', scheduleTitle: 'Orari', schedule: ['Lunedì - Venerdì: 9:00 - 18:00', 'Sabato: 10:00 - 14:00'], formTitle: 'Prenota la tua call gratuita', form: {name:'Nome', company:'Azienda', email:'Email', phone:'Telefono', msg:'Messaggio', send:'Invia'} },
         whatsapp: 'Chatta su WhatsApp', 
         footer: { tagline: 'Soluzioni di Automazione e IA.', linksTitle: 'Link', legalTitle: 'Legale', socialTitle: 'Social', privacy: 'Privacy Policy', rights: 'Tutti i diritti riservati.' },
-        privacy: `<h2 class="text-2xl font-bold mb-4">Privacy Policy</h2><p>YourAgentLab rispetta la tua privacy...</p>`
+        
+        // --- POLÍTICA DE PRIVACIDAD EN ITALIANO ---
+        privacy: `
+            <h2 class="text-2xl font-bold mb-4 font-heading text-primary">Informativa sulla Privacy</h2>
+            <p class="mb-4 text-sm text-gray-500"><strong>Ultimo aggiornamento:</strong> 12 Novembre 2025</p>
+            
+            <h3 class="text-lg font-bold mt-6 mb-2 font-heading">1. Introduzione</h3>
+            <p class="mb-2">YourAgentLab ("noi", "nostro") rispetta la tua privacy e si impegna a proteggere i tuoi dati personali. Questa informativa sulla privacy ti informa su come trattiamo i tuoi dati personali quando visiti il nostro sito web e ti informa sui tuoi diritti in materia di privacy e su come la legge ti protegge.</p>
+
+            <h3 class="text-lg font-bold mt-6 mb-2 font-heading">2. Dati che Raccogliamo</h3>
+            <p class="mb-2">Possiamo raccogliere, utilizzare, archiviare e trasferire diversi tipi di dati personali su di te:</p>
+            <ul class="list-disc pl-5 mb-2 space-y-1">
+                <li><strong>Dati di identità:</strong> nome, cognome.</li>
+                <li><strong>Dati di contatto:</strong> indirizzo email, numero di telefono.</li>
+                <li><strong>Dati aziendali:</strong> nome azienda, settore.</li>
+                <li><strong>Dati tecnici:</strong> indirizzo IP, tipo di browser, fuso orario.</li>
+                <li><strong>Dati di utilizzo:</strong> informazioni su come utilizzi il nostro sito web.</li>
+            </ul>
+
+            <h3 class="text-lg font-bold mt-6 mb-2 font-heading">3. Come Utilizziamo i Tuoi Dati</h3>
+            <p class="mb-2">Utilizziamo i tuoi dati personali per:</p>
+            <ul class="list-disc pl-5 mb-2 space-y-1">
+                <li>Rispondere alle tue richieste di informazioni.</li>
+                <li>Fornirti i nostri servizi.</li>
+                <li>Migliorare il nostro sito web e i nostri servizi.</li>
+                <li>Inviarti comunicazioni di marketing (solo con il tuo consenso).</li>
+                <li>Rispettare obblighi legali.</li>
+            </ul>
+
+            <h3 class="text-lg font-bold mt-6 mb-2 font-heading">4. Base Giuridica del Trattamento</h3>
+            <p class="mb-2">Trattiamo i tuoi dati personali sulla base del tuo consenso, per l'esecuzione di un contratto, per adempiere a obblighi legali o per perseguire i nostri legittimi interessi commerciali.</p>
+
+            <h3 class="text-lg font-bold mt-6 mb-2 font-heading">5. Condivisione dei Dati</h3>
+            <p class="mb-2">Non vendiamo i tuoi dati personali a terzi. Possiamo condividere i tuoi dati con fornitori di servizi che ci aiutano a gestire la nostra attività (es. hosting, email marketing), sempre nel rispetto del GDPR.</p>
+
+            <h3 class="text-lg font-bold mt-6 mb-2 font-heading">6. Sicurezza dei Dati</h3>
+            <p class="mb-2">Abbiamo implementato misure di sicurezza appropriate per prevenire la perdita, l'uso improprio o l'alterazione dei tuoi dati personali. Tutti i dati sono criptati e archiviati in server sicuri.</p>
+
+            <h3 class="text-lg font-bold mt-6 mb-2 font-heading">7. I Tuoi Diritti</h3>
+            <p class="mb-2">Ai sensi del GDPR, hai il diritto di:</p>
+            <ul class="list-disc pl-5 mb-2 space-y-1">
+                <li>Accedere ai tuoi dati personali.</li>
+                <li>Rettificare dati inesatti.</li>
+                <li>Richiedere la cancellazione dei tuoi dati.</li>
+                <li>Opporti al trattamento dei tuoi dati.</li>
+                <li>Richiedere la limitazione del trattamento.</li>
+                <li>Richiedere la portabilità dei dati.</li>
+                <li>Revocare il consenso in qualsiasi momento.</li>
+            </ul>
+
+            <h3 class="text-lg font-bold mt-6 mb-2 font-heading">8. Cookie</h3>
+            <p class="mb-2">Utilizziamo cookie essenziali per il funzionamento del sito e cookie analitici per migliorare l'esperienza utente. Puoi gestire le tue preferenze sui cookie tramite il banner presente sul sito.</p>
+
+            <h3 class="text-lg font-bold mt-6 mb-2 font-heading">9. Conservazione dei Dati</h3>
+            <p class="mb-2">Conserviamo i tuoi dati personali solo per il tempo necessario agli scopi per cui sono stati raccolti, inclusi eventuali requisiti legali, contabili o di reporting.</p>
+
+            <h3 class="text-lg font-bold mt-6 mb-2 font-heading">10. Contatti</h3>
+            <p class="mb-2">Per qualsiasi domanda su questa informativa sulla privacy o per esercitare i tuoi diritti, contattaci a: <a href="mailto:privacy@youragentlab.com" class="text-primary hover:underline">privacy@youragentlab.com</a></p>
+
+            <h3 class="text-lg font-bold mt-6 mb-2 font-heading">11. Modifiche a Questa Informativa</h3>
+            <p class="mb-2">Ci riserviamo il diritto di aggiornare questa informativa sulla privacy in qualsiasi momento. Ti informeremo di eventuali modifiche pubblicando la nuova informativa su questa pagina.</p>
+        `
     },
     en: {
         nav: { home: 'Home', audit: 'Audit & Roadmap', sprints: 'Sprints', about: 'About Us', team: 'Team', faq: 'FAQ', contact: 'Contact' },
@@ -249,7 +371,68 @@ const CONTENT = {
         contact: { title: 'Ready to start?', scheduleTitle: 'Hours', schedule: ['Monday - Friday: 9:00 - 18:00', 'Saturday: 10:00 - 14:00'], formTitle: 'Book your free call', form: {name:'Name', company:'Company', email:'Email', phone:'Phone', msg:'Message', send:'Send'} },
         whatsapp: 'Chat on WhatsApp', 
         footer: { tagline: 'Automation and AI Solutions.', linksTitle: 'Links', legalTitle: 'Legal', socialTitle: 'Follow Us', privacy: 'Privacy Policy', rights: 'All rights reserved.' },
-        privacy: `<h2 class="text-2xl font-bold mb-4">Privacy Policy</h2><p>YourAgentLab respects your privacy...</p>`
+        
+        // --- POLÍTICA DE PRIVACIDAD EN INGLÉS ---
+        privacy: `
+            <h2 class="text-2xl font-bold mb-4 font-heading text-primary">Privacy Policy</h2>
+            <p class="mb-4 text-sm text-gray-500"><strong>Last Updated:</strong> November 12, 2025</p>
+            
+            <h3 class="text-lg font-bold mt-6 mb-2 font-heading">1. Introduction</h3>
+            <p class="mb-2">YourAgentLab ("we", "our") respects your privacy and is committed to protecting your personal data. This privacy policy informs you about how we look after your personal data when you visit our website and tells you about your privacy rights and how the law protects you.</p>
+
+            <h3 class="text-lg font-bold mt-6 mb-2 font-heading">2. Data We Collect</h3>
+            <p class="mb-2">We may collect, use, store, and transfer different kinds of personal data about you:</p>
+            <ul class="list-disc pl-5 mb-2 space-y-1">
+                <li><strong>Identity Data:</strong> first name, last name.</li>
+                <li><strong>Contact Data:</strong> email address, phone number.</li>
+                <li><strong>Business Data:</strong> company name, industry.</li>
+                <li><strong>Technical Data:</strong> IP address, browser type, time zone.</li>
+                <li><strong>Usage Data:</strong> information about how you use our website.</li>
+            </ul>
+
+            <h3 class="text-lg font-bold mt-6 mb-2 font-heading">3. How We Use Your Data</h3>
+            <p class="mb-2">We use your personal data to:</p>
+            <ul class="list-disc pl-5 mb-2 space-y-1">
+                <li>Respond to your requests for information.</li>
+                <li>Provide you with our services.</li>
+                <li>Improve our website and services.</li>
+                <li>Send you marketing communications (only with your consent).</li>
+                <li>Comply with legal obligations.</li>
+            </ul>
+
+            <h3 class="text-lg font-bold mt-6 mb-2 font-heading">4. Legal Basis for Processing</h3>
+            <p class="mb-2">We process your personal data based on your consent, for the performance of a contract, to comply with legal obligations, or to pursue our legitimate business interests.</p>
+
+            <h3 class="text-lg font-bold mt-6 mb-2 font-heading">5. Data Sharing</h3>
+            <p class="mb-2">We do not sell your personal data to third parties. We may share your data with service providers who help us manage our business (e.g., hosting, email marketing), always in compliance with GDPR.</p>
+
+            <h3 class="text-lg font-bold mt-6 mb-2 font-heading">6. Data Security</h3>
+            <p class="mb-2">We have implemented appropriate security measures to prevent your personal data from being lost, used, or accessed in an unauthorized way, altered, or disclosed. All data is encrypted and stored on secure servers.</p>
+
+            <h3 class="text-lg font-bold mt-6 mb-2 font-heading">7. Your Rights</h3>
+            <p class="mb-2">Under the GDPR, you have the right to:</p>
+            <ul class="list-disc pl-5 mb-2 space-y-1">
+                <li>Access your personal data.</li>
+                <li>Rectify inaccurate data.</li>
+                <li>Request the deletion of your data.</li>
+                <li>Object to the processing of your data.</li>
+                <li>Request the restriction of processing.</li>
+                <li>Request data portability.</li>
+                <li>Withdraw consent at any time.</li>
+            </ul>
+
+            <h3 class="text-lg font-bold mt-6 mb-2 font-heading">8. Cookies</h3>
+            <p class="mb-2">We use essential cookies for the website's operation and analytical cookies to improve user experience. You can manage your cookie preferences via the banner on the site.</p>
+
+            <h3 class="text-lg font-bold mt-6 mb-2 font-heading">9. Data Retention</h3>
+            <p class="mb-2">We retain your personal data only for as long as necessary to fulfill the purposes we collected it for, including for the purposes of satisfying any legal, accounting, or reporting requirements.</p>
+
+            <h3 class="text-lg font-bold mt-6 mb-2 font-heading">10. Contact</h3>
+            <p class="mb-2">For any questions about this privacy policy or to exercise your rights, please contact us at: <a href="mailto:privacy@youragentlab.com" class="text-primary hover:underline">privacy@youragentlab.com</a></p>
+
+            <h3 class="text-lg font-bold mt-6 mb-2 font-heading">11. Changes to This Policy</h3>
+            <p class="mb-2">We reserve the right to update this privacy policy at any time. We will notify you of any changes by posting the new policy on this page.</p>
+        `
     }
 };
 
@@ -306,9 +489,7 @@ window.changeService = function(dir) {
     const card = document.getElementById('service-card');
     if (!card) return;
 
-    // 1. Exit Animation (Slide out)
-    // Se desplaza 20px en la dirección contraria para dar efecto de "irse"
-    // y baja opacidad a 0.
+    // 1. Exit Animation
     card.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
     card.style.opacity = '0';
     card.style.transform = dir > 0 ? 'translateX(-20px)' : 'translateX(20px)';
@@ -320,18 +501,17 @@ window.changeService = function(dir) {
         renderSprintCard(items[currentServiceIdx]);
         if (window.lucide) window.lucide.createIcons();
 
-        // 3. Prepare Enter Animation (Slide in)
-        // Posicionamos el elemento en el lado opuesto (sin transición para que sea instantáneo)
+        // 3. Prepare Enter Animation
         card.style.transition = 'none'; 
         card.style.transform = dir > 0 ? 'translateX(20px)' : 'translateX(-20px)';
         
-        // 4. Trigger Enter Animation (Back to center)
+        // 4. Trigger Enter Animation
         setTimeout(() => {
             card.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
             card.style.opacity = '1';
             card.style.transform = 'translateX(0)';
-        }, 50); // Breve retardo para asegurar que el navegador registre el cambio de posición
-    }, 300); // 300ms coincide con la duración de la transición
+        }, 50); 
+    }, 300);
 };
 
 
@@ -339,6 +519,7 @@ window.openPrivacyModal = function(event) {
     if (event) event.preventDefault();
     const modal = document.getElementById('privacy-modal');
     if (modal) {
+        // AQUÍ ES DONDE SE INYECTA EL NUEVO TEXTO DE PRIVACIDAD
         document.getElementById('privacy-content-body').innerHTML = CONTENT[currentLang].privacy;
         modal.classList.remove('hidden');
         document.body.style.overflow = 'hidden';
